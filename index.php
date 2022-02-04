@@ -18,7 +18,7 @@ $tarefas = mysqli_query($conn,$sql);
     <div>
         <ul>
             <?php while($tarefasArr = mysqli_fetch_array($tarefas)) { ?>
-                <li><?= $tarefasArr['tarefa']?></li>
+                <li><?= $tarefasArr['tarefa']?><a href="excluir.php?id=<?= $tarefasArr['id'] ?>">apagar</a></li>
        <?php } ?>
         </ul>
     <div>
